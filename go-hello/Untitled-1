@@ -1,0 +1,6 @@
+oc get -o yaml --export is > ~/is.yaml && cp ~/is.yaml ~/is-clean.yaml
+oc get -o yaml --export bc > ~/bc.yaml && cp ~/bc.yaml ~/bc-clean.yaml
+oc get -o yaml --export dc > ~/dc.yaml && cp ~/dc.yaml ~/dc-clean.yaml
+oc get -o yaml --export svc > ~/svc.yaml && cp ~/svc.yaml ~/svc-clean.yaml
+oc get -o yaml --export route > ~/route.yaml && cp ~/route.yaml ~/route-clean.yaml
+tar czf yamls.tgz ~/*.yaml
